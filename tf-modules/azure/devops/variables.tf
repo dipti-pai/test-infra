@@ -18,11 +18,6 @@ variable "repository_name" {
   type        = string
 }
 
-variable "principal_id" {
-    description = "The id of the AAD managed identity/user to give access to the Azure DevOps organization"
-    type        = string
-}
-
 variable "tags" {
   description = "Tags for the created resources"
   type        = map(string)
