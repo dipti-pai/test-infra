@@ -4,6 +4,11 @@ module "tags" {
   tags = var.tags
 }
 
+provider "azuredevops" {
+  org_service_url = "https://dev.azure.com/${var.organization}"
+  personal_access_token = var.pat_token
+}
+
 resource "azuredevops_project" "project" {
   name               = var.project_name
   visibility         = "private"
